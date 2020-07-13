@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sample" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2b16eec6-4496-4c20-9298-aa55cc5b392d">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <parameter name="name" class="java.lang.String"/>
+    <parameter name="amount" class="java.math.BigDecimal"/>
+    <parameter name="remarks" class="java.lang.String"/>
+    <parameter name="paymentDate" class="java.util.Date"/>
+    <parameter name="paymentTypeName" class="java.lang.String"/>
+    <parameter name="Parameter1" class="java.lang.String"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="79" splitType="Stretch">
+            <staticText>
+                <reportElement positionType="FixRelativeToBottom" x="30" y="0" width="490" height="70" uuid="8333cb40-86ab-48fd-b5e7-93d0cd0df6dc"/>
+                <box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+                    <pen lineWidth="1.0" lineStyle="Solid"/>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Bottom">
+                    <font fontName="IPAex明朝" size="24" isPdfEmbedded="f"/>
+                </textElement>
+                <text><![CDATA[領収書]]></text>
+            </staticText>
+        </band>
+    </title>
+    <columnHeader>
+        <band height="165" splitType="Stretch">
+            <staticText>
+                <reportElement x="30" y="125" width="350" height="40" uuid="e24868f6-65bd-4d61-bf07-e33c083be404"/>
+                <box>
+                    <pen lineWidth="1.0" lineStyle="Solid"/>
+                    <topPen lineWidth="0.0"/>
+                    <leftPen lineWidth="0.0"/>
+                    <rightPen lineWidth="0.0"/>
+                </box>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="320" y="60" width="70" height="24" uuid="38073656-79c6-44f3-9ad3-aeb9b1275884"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font fontName="IPAex明朝" size="11" isPdfEmbedded="true"/>
+                </textElement>
+                <text><![CDATA[発行日 :]]></text>
+            </staticText>
+            <textField pattern="¤#,##0.###;¤(#,##0.###-)">
+                <reportElement x="30" y="129" width="300" height="35" uuid="abfe4adb-ed0f-4b23-885a-faa9c160995b"/>
+                <box>
+                    <pen lineWidth="1.0" lineStyle="Double"/>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="IPAex明朝" size="17" isPdfEmbedded="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="340" y="128" width="30" height="36" uuid="f9d5dbc7-a84b-4d12-a1dc-d5581dacc623"/>
+                <box>
+                    <pen lineWidth="1.0" lineStyle="Double"/>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font fontName="IPAex明朝" size="15" isPdfEmbedded="true"/>
+                </textElement>
+                <text><![CDATA[御中]]></text>
+            </staticText>
+            <textField pattern="yyyy/MM/dd(E)">
+                <reportElement x="390" y="60" width="131" height="24" uuid="17596721-8bc6-45cc-b116-5953c500ee33"/>
+                <box>
+                    <bottomPen lineWidth="0.25"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="IPAex明朝" size="11"/>
+                </textElement>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="310" splitType="Stretch">
+            <staticText>
+                <reportElement mode="Opaque" x="30" y="34" width="491" height="40" backcolor="#E3E3E3" uuid="25bc01f6-31c2-4bfa-a63a-4ac307f30032"/>
+                <box>
+                    <bottomPen lineWidth="3.0" lineStyle="Double"/>
+                </box>
+                <textElement>
+                    <font fontName="IPAex明朝"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <textField pattern="¤#,##0.### - ">
+                <reportElement mode="Transparent" x="130" y="34" width="290" height="40" backcolor="#FFFFFF" uuid="134d63ff-fadb-4df0-8e1c-77b7a005680a">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f8c1ee2a-ea6b-4d73-959b-9f0abb0b6e6f"/>
+                </reportElement>
+                <box>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="IPAex明朝" size="19" isPdfEmbedded="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{amount}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="30" y="34" width="100" height="40" uuid="db8aeda4-bbb8-40de-b78d-d27928bcbfa4"/>
+                <box>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="IPAex明朝" size="16" pdfEncoding="" isPdfEmbedded="false"/>
+                </textElement>
+                <text><![CDATA[金額]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="466" y="43" width="40" height="23" uuid="5e4c6c6c-fcfa-4331-88ca-2e9f06cbe0af"/>
+                <box>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Right" verticalAlignment="Bottom">
+                    <font fontName="IPAex明朝" isPdfEmbedded="false"/>
+                </textElement>
+                <text><![CDATA[(税込)]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="30" y="129" width="60" height="60" forecolor="#545454" uuid="a1b563dd-70ad-4e21-8cc4-c6c9f3930037"/>
+                <box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+                    <pen lineWidth="1.0" lineStyle="Solid"/>
+                    <topPen lineWidth="0.25"/>
+                    <leftPen lineWidth="0.25"/>
+                    <bottomPen lineWidth="0.25"/>
+                    <rightPen lineWidth="0.25"/>
+                </box>
+                <textElement textAlignment="Justified" verticalAlignment="Middle" rotation="None">
+                    <font fontName="IPAex明朝" size="11" isPdfEmbedded="false"/>
+                    <paragraph lineSpacing="1_1_2"/>
+                </textElement>
+                <text><![CDATA[電 子 領 収 書 に つ き 印 紙 不 要
+]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="214" y="128" width="30" height="20" uuid="5b7930ad-c61e-4dfa-b74b-62c481d8a189"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="IPAex明朝" size="11" isPdfEmbedded="false"/>
+                </textElement>
+                <text><![CDATA[但し]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="443" y="128" width="62" height="20" uuid="65e2c04b-3fe6-4ece-bb69-45ea77b56f1f"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="IPAex明朝" size="11" isPdfEmbedded="false"/>
+                </textElement>
+                <text><![CDATA[として、]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="214" y="148" width="291" height="20" uuid="23f82175-3e48-4b40-947f-ca693db78fa6"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="IPAex明朝" size="11" isPdfEmbedded="false"/>
+                </textElement>
+                <text><![CDATA[上記の金額正に受領致しました。]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="244" y="128" width="199" height="20" uuid="4858ecb2-2605-4eba-b52c-2b42a3e4025d">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c2140243-d0ea-4017-92d4-37b732f3d477"/>
+                </reportElement>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="IPAex明朝" size="11" isPdfEmbedded="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{remarks}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="214" y="178" width="90" height="20" uuid="a59435ed-04ec-4dc3-a338-7030d4927a1b"/>
+                <box topPadding="0" leftPadding="8" bottomPadding="0" rightPadding="0">
+                    <pen lineWidth="0.25"/>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="IPAex明朝" size="11" isPdfEmbedded="false"/>
+                </textElement>
+                <text><![CDATA[入金日]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="214" y="202" width="90" height="20" uuid="7aa6f265-fb15-415c-aa1f-08c80ab666b5"/>
+                <box leftPadding="8" bottomPadding="1">
+                    <pen lineWidth="0.25"/>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="IPAex明朝" size="11" isPdfEmbedded="false"/>
+                </textElement>
+                <text><![CDATA[お支払方法]]></text>
+            </staticText>
+            <textField pattern="yyyy/MM/dd">
+                <reportElement x="304" y="178" width="201" height="20" uuid="39abd088-e7a3-4dfe-8257-70bcc58d2631">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c51de9c1-3309-474b-a858-bc897393079d"/>
+                </reportElement>
+                <box bottomPadding="1" rightPadding="0">
+                    <pen lineWidth="0.25"/>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="IPAex明朝" size="11" isPdfEmbedded="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{paymentDate}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="304" y="202" width="201" height="20" uuid="6fe7e988-c072-4ec3-a428-da822125f09b">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="547298a1-00b0-46db-8f71-08b3197f7bc9"/>
+                </reportElement>
+                <box bottomPadding="1">
+                    <pen lineWidth="0.5"/>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="IPAex明朝" size="11" isPdfEmbedded="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{paymentTypeName}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="246" y="240" width="274" height="70" uuid="ca7e3ef2-098a-4f3c-967e-534629858c9d"/>
+                <textElement textAlignment="Left" verticalAlignment="Top">
+                    <font fontName="IPAex明朝" size="11" isPdfEmbedded="false"/>
+                    <paragraph lineSpacing="1_1_2" lineSpacingSize="0.0"/>
+                </textElement>
+                <text><![CDATA[株式会社ウィズテクノロジー
+大阪府大阪市久太郎町2町目5-28 久太郎町恒和ビル7F
+TEL 06-6282-7191]]></text>
+            </staticText>
+        </band>
+    </detail>
+    <pageFooter>
+        <band height="49" splitType="Stretch"/>
+    </pageFooter>
+</jasperReport>
