@@ -4722,10 +4722,20 @@
 	<security-constraint>
         <web-resource-collection>
             <web-resource-name>Authentication of FormAuth</web-resource-name>
-            <url-pattern>/*</url-pattern>
+            <url-pattern>/sample/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <role-name>form</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Authentication of FormAuth</web-resource-name>
+            <url-pattern>/sample2/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>form2</role-name>
         </auth-constraint>
     </security-constraint>
 

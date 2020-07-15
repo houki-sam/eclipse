@@ -40,8 +40,10 @@
 
      <role rolename="manager-script"/>
      <role rolename="form"/>
+     <role rolename="form2"/>
      <role rolename="manager-gui"/>
      <role rolename="manager-jmx"/>
      <role rolename="manager-status"/>
      <user username="tomcat" password="tomcat" roles="manager-gui,manager-status,form"/>
+     <user username="tomcat2" password="tomcat" roles="manager-gui,manager-status,form2"/>
 </tomcat-users>
