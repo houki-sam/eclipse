@@ -1,7 +1,0 @@
-<%@ include file="common/jsp/header.jsp" %>
-<div class="ui container">
-堀田侑希だよ
-</div>
-
-</body>
-</html>

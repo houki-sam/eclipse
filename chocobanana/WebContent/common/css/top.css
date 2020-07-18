@@ -1,0 +1,9 @@
+.bg-sample{
+background-image:url("/chocobanana/common/img/top.jpg");
+min-height:400px;
+margin-top:-70px;
+}
+
+h4{
+	color: #00336D;
+}

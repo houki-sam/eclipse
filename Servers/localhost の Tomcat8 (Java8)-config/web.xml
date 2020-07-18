@@ -4722,22 +4722,53 @@
 	<security-constraint>
         <web-resource-collection>
             <web-resource-name>Authentication of FormAuth</web-resource-name>
-            <url-pattern>/sample/*</url-pattern>
+            <url-pattern>/setting/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
-            <role-name>form</role-name>
+            <role-name>setting</role-name>
         </auth-constraint>
     </security-constraint>
 
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>Authentication of FormAuth</web-resource-name>
-            <url-pattern>/sample2/*</url-pattern>
+            <url-pattern>/order/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
-            <role-name>form2</role-name>
+            <role-name>order</role-name>
         </auth-constraint>
     </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Authentication of FormAuth</web-resource-name>
+            <url-pattern>/login/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>login</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Authentication of FormAuth</web-resource-name>
+            <url-pattern>/money/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>money</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Authentication of FormAuth</web-resource-name>
+            <url-pattern>/recept/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>recept</role-name>
+        </auth-constraint>
+    </security-constraint>
+
 
     <login-config>
         <auth-method>FORM</auth-method>

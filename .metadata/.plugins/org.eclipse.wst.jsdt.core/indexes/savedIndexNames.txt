@@ -3,10 +3,5 @@ INDEX VERSION 1.4+/Applications/Eclipse_2020-06.app/Contents/workspace/.metadata
 1677488655.index
 142550294.index
 4095078459.index
-3810409857.index
-39454240.index
-516764423.index
 845335422.index
 2375174643.index
-3666253374.index
-565822659.index

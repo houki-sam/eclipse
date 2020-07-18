@@ -13,23 +13,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="jar_files/jasperreports-6.12.2.jar" sourcepath="/var/folders/ml/fzfclqf9371358_zw_sp8t3w0000gn/T/.org.sf.feeling.decompiler1594541896980/source/jasperreports-6.12.2-sources.jar"/>
-	<classpathentry kind="lib" path="jar_files/commons-logging-1.1.1.jar"/>
-	<classpathentry kind="lib" path="jar_files/bcprov-jdk15on-1.62.jar"/>
-	<classpathentry kind="lib" path="jar_files/castor-core-1.4.1.jar"/>
-	<classpathentry kind="lib" path="jar_files/castor-xml-1.4.1.jar"/>
-	<classpathentry kind="lib" path="jar_files/commons-beanutils-1.9.4.jar"/>
-	<classpathentry kind="lib" path="jar_files/commons-collections-3.2.2.jar"/>
-	<classpathentry kind="lib" path="jar_files/commons-collections4-4.2.jar"/>
-	<classpathentry kind="lib" path="jar_files/commons-digester-2.1.jar"/>
-	<classpathentry kind="lib" path="jar_files/commons-lang3-3.4.jar"/>
-	<classpathentry kind="lib" path="jar_files/ecj-4.4.2.jar"/>
-	<classpathentry kind="lib" path="jar_files/itext-2.1.7.js7.jar"/>
-	<classpathentry kind="lib" path="jar_files/jackson-annotations-2.10.0.jar"/>
-	<classpathentry kind="lib" path="jar_files/jackson-core-2.10.0.jar"/>
-	<classpathentry kind="lib" path="jar_files/jackson-databind-2.10.0.jar"/>
-	<classpathentry kind="lib" path="jar_files/javax.inject-1.jar"/>
-	<classpathentry kind="lib" path="jar_files/jcommon-1.0.23.jar"/>
-	<classpathentry kind="lib" path="jar_files/jfreechart-1.0.19.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2020-06.app/Contents/workspace/chocobanana/build/classes/db2jcc4.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

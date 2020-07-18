@@ -39,11 +39,14 @@
 -->
 
      <role rolename="manager-script"/>
-     <role rolename="form"/>
-     <role rolename="form2"/>
+     <role rolename="setting"/>
+     <role rolename="login"/>
+     <role rolename="recept"/>
+     <role rolename="money"/>
+     <role rolename="order"/>
      <role rolename="manager-gui"/>
      <role rolename="manager-jmx"/>
      <role rolename="manager-status"/>
-     <user username="tomcat" password="tomcat" roles="manager-gui,manager-status,form"/>
+     <user username="tomcat" password="tomcat" roles="manager-gui,manager-status,setting,login,recept,money,order"/>
      <user username="tomcat2" password="tomcat" roles="manager-gui,manager-status,form2"/>
 </tomcat-users>

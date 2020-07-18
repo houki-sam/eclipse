@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Class-Path: 
-
-<login-config>
-  <auth-method>BASIC</auth-method>
-  <realm-name>admin page</realm-name>
-</login-config>
