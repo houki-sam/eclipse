@@ -14,7 +14,7 @@
 		<div class="row">
 			<div class="col-3">
 				<div class="card" >
-					<a href="./member/member.html">
+					<a href="./member">
 						<div class="card-body">
 						<h4 class="card-title">会員一覧</h5>
 						</div>
@@ -24,7 +24,7 @@
 
 			<div class="col-3">
 				<div class="card" >
-					<a href="./sponsor/sponsor.html">
+					<a href="./sponsor">
 						<div class="card-body">
 						<h4 class="card-title">協賛企業一覧</h4>
 						</div>
@@ -34,7 +34,7 @@
 
 			<div class="col-3">
 				<div class="card" >
-					<a href="./product/product.html">
+					<a href="./product">
 						<div class="card-body">
 						<h4 class="card-title">商品一覧</h4>
 						</div>
@@ -44,7 +44,7 @@
 
 			<div class="col-3">
 				<div class="card">
-					<a href="./reception/reception.html">
+					<a href="./reception">
 						<div class="card-body">
 						<h4 class="card-title">注文一覧</h4>
 						</div>
