@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% String a = (String)request.getAttribute("a"); %>
 <%! String title_name="協賛企業登録確認"; %>
 <jsp:useBean id="data" type="beans.KyosankigyoBeans" class="beans.KyosankigyoBeans" scope="request"/>
 <!DOCTYPE html>
@@ -22,28 +21,28 @@
 				<tbody>
 					<tr class="d-flex">
 							<td class="col-3">協賛企業名（漢字）</td>
-							<td class="col-9"><jsp:getProperty property="seikyuyubinbango" name="data"/><%= a %></td>
+							<td class="col-9"><jsp:getProperty property="kyosankigyomei_kanji" name="data"/></td>
 
 						</tr>
 						<tr class="d-flex">
 							<td class="col-3">協賛企業名（カナ）</td>
-							<td class="col-9">ロータスジドウシャ</td>
+							<td class="col-9"><jsp:getProperty property="kyosankigyomei_kana" name="data"/></td>
 						</tr>
 						<tr class="d-flex">
 							<td class="col-3">郵便番号</td>
-							<td class="col-9">1234567</td>
+							<td class="col-9"><jsp:getProperty property="seikyuyubinbango" name="data"/></td>
 						</tr>
 						<tr class="d-flex">
 							<td class="col-3">住所</td>
-							<td class="col-9">東京都府中市日鋼町1-19</td>
+							<td class="col-9"><jsp:getProperty property="seikyusakizyusyo" name="data"/></td>
 						</tr>
 						<tr class="d-flex">
 							<td class="col-3">電話番号</td>
-							<td class="col-9">042-351-1111</td>
+							<td class="col-9"><jsp:getProperty property="seikyusakidenwabango" name="data"/></td>
 						</tr>
 						<tr class="d-flex">
 							<td class="col-3">給料支給日</td>
-							<td class="col-9">25</td>
+							<td class="col-9"><jsp:getProperty property="kyuryoshikyubi" name="data"/></td>
 						</tr>
 					</tbody>
 				</table>
@@ -60,19 +59,19 @@
 							<tbody>
 								<tr class="d-flex">
 									<td class="col-5">担当部署</td>
-									<td class="col-7">経理</td>
+									<td class="col-7"><jsp:getProperty property="tantobusyo" name="data"/></td>
 								</tr>
 								<tr class="d-flex">
 									<td class="col-5">担当者名（漢字）</td>
-									<td class="col-7">安田一太郎</td>
+									<td class="col-7"><jsp:getProperty property="tantosyamei_kanji" name="data"/></td>
 								</tr>
 								<tr class="d-flex">
 									<td class="col-5">担当者名（カナ）</td>
-									<td class="col-7">ヤスダイチタロウ</td>
+									<td class="col-7"><jsp:getProperty property="tantosyamei_kana" name="data"/></td>
 								</tr>
 								<tr class="d-flex">
 									<td class="col-5">担当者電話番号</td>
-									<td class="col-7">042-351-1111</td>
+									<td class="col-7"><jsp:getProperty property="tantosyadenwabango" name="data"/></td>
 								</tr>
 							</tbody>
 						</table>
@@ -91,19 +90,19 @@
 
 								<tr class="d-flex">
 									<td class="col-5">振込銀行</td>
-									<td class="col-7">みずほ銀行</td>
+									<td class="col-7"><jsp:getProperty property="kyosankigyohurikomiginko" name="data"/></td>
 								</tr>
 								<tr class="d-flex">
 									<td class="col-5">振込銀行支店名</td>
-									<td class="col-7">府中</td>
+									<td class="col-7"><jsp:getProperty property="kyosankigyohurikomiginkoshitenmei" name="data"/></td>
 								</tr>
 								<tr class="d-flex">
 									<td class="col-5">振込銀行口座種別</td>
-									<td class="col-7">当座</td>
+									<td class="col-7"><jsp:getProperty property="accountString" name="data"/></td>
 								</tr>
 								<tr class="d-flex">
 									<td class="col-5">振込銀行口座番号</td>
-									<td class="col-7">1587986</td>
+									<td class="col-7"><jsp:getProperty property="kyosankigyokozabango" name="data"/></td>
 								</tr>
 							</tbody>
 						</table>

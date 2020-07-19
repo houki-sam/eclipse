@@ -33,21 +33,25 @@
 					</div>
 					<div class="form-group">
 						<label for="zyusyo">住所</label>
-						<input type="text" maxlength="100" name="seikyuzyusyo" value="" class="form-control" required>
+						<input type="text" maxlength="100" name="seikyusakizyusyo" value="" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label for="denwabango">電話番号</label>
-						<input type="tel" maxlength="11" name="denwabango" value="" class="form-control" required>
+						<input type="tel" maxlength="11" name="seikyusakidenwabango" value="" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label for="kyuryo">給料支給日</label>
-						<select name="kyuyoshikyubi" class="form-control">
+						<select name="kyuryoshikyubi" class="form-control">
 							<option disabled selected>給料支給日を選んでください。</option>
 							<option value="15">15</option>
 							<option value="20">20</option>
 							<option value="25">25</option>
 							<option value="0">その他</option>
 						</select>
+					</div>
+					<div class="form-group">
+						<label for="hoka">給料支給日（その他）</label>
+						<input type="tel" maxlength="2" name="hoka" value="" class="form-control">
 					</div>
 				 </div>
 			</div>
@@ -61,7 +65,7 @@
 			  			<div class="card-body">
 							<div class="form-group">
 								<label for="tantobusyo">担当部署</label>
-								<input type="text" maxlength="30" name="tantoubusyo" value="" class="form-control" required>
+								<input type="text" maxlength="30" name="tantobusyo" value="" class="form-control" required>
 							</div>
 							<div class="form-group">
 								<label for="tantosyamei_kanji">担当者名（漢字）</label>
@@ -87,23 +91,23 @@
 
 							<div class="form-group">
 								<label for="ginko">銀行名</label>
-								<input type="text" maxlength="50" name="ginko" value="" class="form-control" required>
+								<input type="text" maxlength="50" name="kyosankigyohurikomiginko" value="" class="form-control" required>
 							</div>
 							<div class="form-group">
 								<label for="ginkositenmei">支店名</label>
-								<input type="text" maxlength="50" name="ginkositenmei" value="" class="form-control" required>
+								<input type="text" maxlength="50" name="kyosankigyohurikomiginkoshitenmei" value="" class="form-control" required>
 							</div>
 							<div class="form-group">
 								<label for="kozasyubetsu">口座種別</label><br>
-								  <select name="kozasyubetsu" class="form-control" required>
+								  <select name="kyosankigyokozasyubetsu" class="form-control" required>
 									<option selected disabled>口座種別を選んでください</option>
-									<option value="touza">当座</option>
-									<option value="hutsu">普通</option>
+									<option value="1">当座</option>
+									<option value="0">普通</option>
 									</select>
 							</div>
 							<div class="form-group">
-								<label for="kozabango">口座番号</label>
-								<input type="tel" maxlength="50" name="kozabango" value="" class="form-control" required>
+								<label for="kyosankigyokozabango">口座番号</label>
+								<input type="tel" maxlength="50" name="kyosankigyokozabango" value="" class="form-control" required>
 							</div>
 						</div>
 					</div>

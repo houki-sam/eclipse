@@ -45,12 +45,10 @@ public class ReceptSponsorRegisterConfirm extends HttpServlet {
 
 		//協賛企業データ
 		KyosankigyoBeans data = new KyosankigyoBeans();
-
-		String a = (String)request.getParameter("seikyuyubinbango");
-		data.setSeikyuyubinbango(a);
+		//requestで送られてきたデータをbeansにセット
+		data.setRequest(request);;
 
 		//forward
-		request.setAttribute("a", a);
 		request.setAttribute("data", data);
 		RequestDispatcher rd = request.getRequestDispatcher("/jsp/recept/sponsor/register_confirm.jsp");
 		rd.forward(request, response);
