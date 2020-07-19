@@ -16,22 +16,29 @@ public class Sample {
         try (Connection con = DriverManager.getConnection(url, user, pass);
             Statement stmt = con.createStatement()) {
 
+        	stmt.execute("DROP TABLE auth_users");
+        	stmt.execute("DROP TABLE auth_roles");
+
             // テーブル作成
-            stmt.execute("CREATE TABLE test(id int, name varchar(100))");
+            stmt.execute("CREATE TABLE auth_users(user_name varchar(100), user_pass varchar(100))");
+            stmt.execute("CREATE TABLE auth_roles(user_name varchar(100), role_name varchar(100))");
 
             // 登録
-            stmt.execute("INSERT INTO test(id, name) VALUES (1, 'Javaからテスト登録')");
+            stmt.execute("INSERT INTO auth_users(user_name,user_pass) VALUES('tomcat','tomcat')");
+            stmt.execute("INSERT INTO auth_roles(user_name,role_name) VALUES('tomcat','setting')");
+            stmt.execute("INSERT INTO auth_roles(user_name,role_name) VALUES('tomcat','login')");
+
 
             // 検索
-            ResultSet rs = stmt.executeQuery("SELECT * FROM test");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM auth_roles");
 
             while(rs.next()) {
-                System.out.println(rs.getInt("id"));
-                System.out.println(rs.getString("name"));
+                System.out.println(rs.getString("user_name"));
+                System.out.println(rs.getString("role_name"));
             }
 
             // テーブル削除
-            stmt.execute("DROP TABLE test");
+            //stmt.execute("DROP TABLE test");
 
         }
     }

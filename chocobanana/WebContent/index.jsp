@@ -15,7 +15,9 @@
     <div class="container">
         <h1 class="mt-3">トップメニュー</h1>
         <hr>
-        <% if (!(request.isUserInRole("recept") && request.isUserInRole("recept") && request.isUserInRole("recept") && request.isUserInRole("recept"))){%>
+        <%@ page import ="javax.servlet.http.HttpSession" %>
+		<% HttpSession session2 = request.getSession(false);
+            		if((String)request.getRemoteUser() == null) {%>
         	<div class="col-12">
  				<a href="/chocobanana/login/login">
                  	<button class="btn" style="background-color:#00336D;color: #fff;">ログイン</button>
@@ -65,7 +67,7 @@
 					</div>
 				</div>
 			</div>
-		<%} if(request.isUserInRole("recept")){%>
+		<%} if(request.isUserInRole("setting")){%>
 			<div class="col-3">
 	            <div class="card">
 					<div class="card-header">
